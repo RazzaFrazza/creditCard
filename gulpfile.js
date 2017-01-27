@@ -4,20 +4,36 @@ var sequence    = require('gulp-sequence');
 var sass        = require('gulp-sass');
 var sourcemaps  = require('gulp-sourcemaps');
 var uglify      = require('gulp-uglify');
+var babel = require('gulp-babel');
+var babelPreset = require('babel-preset-es2015');
 var pump = require('pump');
+
+
+/**
+ * Babel
+ */
+
+ gulp.task('_babel', function() {
+
+  return gulp.src('./assets/js/*.js')
+    .pipe(babel({
+            presets: ['es2015']
+    }))
+    .pipe(gulp.dest('./assets/js/'));
+ });
 
 /**
  * Compress Javascript 
  */
 
  gulp.task('_compress', function (cb) {
-  pump([
-        gulp.src('./assets/js/*.js'),
-        uglify(),
-        gulp.dest('./builtAssets/js/'),
-    ],
-    cb
-  );
+    pump([
+          gulp.src('./assets/js/*.js'),
+          uglify(),
+          gulp.dest('./builtAssets/js/'),
+      ],
+      cb
+    );
 });
 
 /**
@@ -51,4 +67,4 @@ gulp.task('_watch', function() {
  *
  * Define the default task when running `gulp`.
  */
-gulp.task('default', sequence('_styles', '_compress','_watch'));
+gulp.task('default', sequence('_styles', '_babel', '_compress','_watch'));
