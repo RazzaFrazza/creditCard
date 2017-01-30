@@ -8,13 +8,14 @@
     <title>Expense Tracker</title>
     <!-- Styles -->
     <link rel="stylesheet" href="./builtAssets/css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Scripts -->
     <script src="./builtAssets/js/main.js"></script>
 </head>
 
 <body>
-    <main>
+    <main class="content">
         <section class="section">
             <header class="header">
                 <h3 class="h3"> My Wallets</h3>
@@ -24,7 +25,7 @@
                 <div class="card">
                     <div class="inner typeOne">
                         <div class="logo typeOne-logo">
-                          <img class="logoImage" src="./builtAssets/images/visaCardLogo.png" alt="Card Image">
+                            <img class="logoImage" src="./builtAssets/images/visaCardLogo.png" alt="Card Image">
                         </div>
                         <div class="number typeOne-number">
                             <span class="decoration">****</span>
@@ -38,11 +39,11 @@
                     </div>
                 </div>
                 <div class="card">
-                                    <div class="inner typeTwo">
-                     <div class="logo typeTwo-logo">
-                          <img class="logoImage" src="./builtAssets/images/amexCardLogo.png" alt="Card Image">
+                    <div class="inner typeTwo">
+                        <div class="logo typeTwo-logo">
+                            <img class="logoImage" src="./builtAssets/images/amexCardLogo.png" alt="Card Image">
                         </div>
-                                     <div class="number typeTwo-number">
+                        <div class="number typeTwo-number">
                             <span class="decoration">****</span>
                             <span class="decoration">******</span>
                             <span class="data">123456</span>
@@ -53,11 +54,11 @@
                     </div>
                 </div>
                 <div class="card">
-                                    <div class="type typeThree">
-                         <div class="typeThree-logo">
-                          <img class="logoImage" src="./builtAssets/images/masterCardLogo.png" alt="Card Image">
+                    <div class="inner typeThree">
+                        <div class="typeThree-logo">
+                            <img class="logoImage" src="./builtAssets/images/masterCardLogo.png" alt="Card Image">
                         </div>
-                                     <div class="number typeThree-number">
+                        <div class="number typeThree-number">
                             <span class="decoration">****</span>
                             <span class="decoration">****</span>
                             <span class="decoration">****</span>
@@ -73,7 +74,84 @@
         <section class="section">
             <header class="header">
                 <h3 class="h3"> Current Balance</h3>
+                <div class="data-container">
+                    <span class="data">$729.00</span>
+                </div>
             </header>
+            <!-- Border Goes Here  utilizing empty div via after element --> 
+            <div class="decoration">
+            </div>
+            <div class="content-item">
+                <div class="item-action">
+                  <button class="button"><i class="fa fa-minus"></i></button>
+                </div>
+                <div class="item-info">
+                    <span class="title">Apple iPhone 6, 6g GB</span>
+             </span>
+                    <span class="details">Electronics<span class="sub-details">#343223</span><span class="sub-decoration">-</span>12 July, 2015
+             </span>
+                </div>
+                <div class="item-info">
+                  <span class="info">$650.00</span>
+                </div>
+            </div>
+            <div class="content-item plus">
+                <div class="item-action">
+                  <button class="button"><i class="fa fa-plus"></i></button>
+                </div>
+                <div class="item-info">
+                    <span class="title">Funds Added</span>
+             </span>
+                                 <span class="details">Electronics<span class="sub-details">#343223</span><span class="sub-decoration">-</span>11 July, 2015
+             </span>
+                </div>
+                <div class="item-info">
+                  <span class="info">$900.00</span>
+                </div>
+            </div>
+                        <div class="content-item">
+                <div class="item-action">
+                  <button class="button"><i class="fa fa-minus"></i></button>
+                </div>
+                <div class="item-info">
+                    <span class="title">Energy Bill</span>
+             </span>
+                    <span class="details"><span class="sub-details">#343556</span><span class="sub-decoration">-</span>11 July, 2015
+             </span>
+                </div>
+                <div class="item-info">
+                  <span class="info">$84.96</span>
+                </div>
+            </div>
+                       </div>
+                        <div class="content-item">
+                <div class="item-action">
+                  <button class="button"><i class="fa fa-minus"></i></button>
+                </div>
+                <div class="item-info">
+                    <span class="title">Mega Image SRL</span>
+             </span>
+                    <span class="details">Food&Health<span class="sub-details">#34365</span><span class="sub-decoration">-</span>11 July, 2015
+             </span>
+                </div>
+                <div class="item-info">
+                  <span class="info">$112.75</span>
+                </div>
+            </div>
+                                    <div class="content-item">
+                <div class="item-action">
+                  <button class="button"><i class="fa fa-minus"></i></button>
+                </div>
+                <div class="item-info">
+                    <span class="title">ATM DV24</span>
+             </span>
+                    <span class="details"><span class="sub-details">#343253</span><span class="sub-decoration">-</span>09 July, 2015
+             </span>
+                </div>
+                <div class="item-info">
+                  <span class="info">$200.00</span>
+                </div>
+            </div>
         </section>
     </main>
 </body>
